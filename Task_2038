@@ -1,0 +1,26 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        short counter = 0, counterMax = 0;
+        for (int i=0; i<text.length(); i++)
+        {
+            if ((byte)text.charAt(i) >= 97 && (byte)text.charAt(i) <=122 ) {
+                counter++;
+                if (counter>counterMax)
+                    counterMax = counter;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+        System.out.println(counterMax);
+    }
+}
