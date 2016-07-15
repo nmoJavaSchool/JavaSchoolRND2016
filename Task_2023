@@ -1,0 +1,47 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        byte Acounter = sc.nextByte();
+        sc.nextLine();
+        String Str = sc.nextLine();
+        String[] StrArray_A = Str.split(" ");
+        byte Bcounter = sc.nextByte();
+        sc.nextLine();
+        Str = sc.nextLine();
+        String[] StrArray_B = Str.split(" ");
+        short[] Array_A = new short[Acounter];
+        short[] Array_B = new short[Bcounter];
+        for (int i=0;i<Acounter; i++)
+        {
+            Array_A[i] = Short.parseShort(StrArray_A[i]);
+        }
+        for (int i=0;i<Bcounter; i++)
+        {
+            Array_B[i] = Short.parseShort(StrArray_B[i]);
+        }
+        short[] Array_C = new short[Acounter];
+        byte Ccounter = 0;
+        for (int i=0;i<Acounter; i++) {
+            for (int j=0;j<Bcounter;j++)
+            {
+                if (Array_A[i] == Array_B[j])
+                {
+                    Array_C[Ccounter] = Array_A[i];
+                    Ccounter ++;
+                    break;
+                }
+            }
+        }
+        System.out.println(Ccounter);
+        for (int j=0;j<Ccounter;j++)
+        {
+            System.out.print(Array_C[j]+" ");
+        }
+    }
+}

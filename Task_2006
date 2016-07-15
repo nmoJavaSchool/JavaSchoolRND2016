@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int cm = sc.nextInt();
+        sc.nextLine();
+        int dume = cm/3;
+        if (cm%3==2)
+            dume ++;
+        int fut = dume/12;
+        System.out.println(fut+" "+dume);
+    }
+}
