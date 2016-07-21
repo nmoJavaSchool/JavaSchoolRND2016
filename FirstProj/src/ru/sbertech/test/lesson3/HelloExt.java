@@ -10,4 +10,5 @@ public class HelloExt {
         }
     }
     SayHello sh = new SayHello();
+    SayHello sh1 = new SayHello();
 }
